@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MultiVerse Checkup</string>
+    <string name="lbl_details_view">Details View</string>
+    <string name="check_out_this_image_title_author_published">Check out this image:\n\nName: %1$s\nStatus: %2$s\nCreated On: %3$s\n\nUrl: %4$s</string>
+
+    <string name="lbl_share">Share</string>
+    <string name="lbl_back">Back</string>
+    <string name="lbl_published_on">Published on %1$s</string>
+    <string name="lbl_search_character">Search Character</string>
+</resources>
