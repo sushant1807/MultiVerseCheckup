@@ -2,7 +2,6 @@
 accompanistNavigationAnimation = "0.31.1-alpha"
 agp = "8.5.2"
 coilCompose = "2.3.0"
-coilComposeVersion = "3.1.0"
 coreTesting = "2.2.0"
 hiltAndroid = "2.55"
 kotlin = "2.1.10"
@@ -34,8 +33,6 @@ accompanist-navigation-animation = { module = "com.google.accompanist:accompanis
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
-coil-network-okhttp = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "coilComposeVersion" }
-coil3-coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilComposeVersion" }
 dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hiltAndroid" }
 dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "hiltAndroid" }
 dagger-hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroid" }

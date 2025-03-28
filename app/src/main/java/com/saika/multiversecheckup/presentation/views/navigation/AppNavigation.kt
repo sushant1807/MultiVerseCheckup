@@ -1,6 +1,5 @@
 package com.saika.multiversecheckup.presentation.views.navigation
 
-import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavType
@@ -20,7 +19,6 @@ fun AppNavigation() {
         composable("imageSearch") {
             CharacterSearchView(
                 onItemClick = { id ->
-                    Log.e("App ID 1", id.toString())
                     navController.navigate("detail/$id")
                 })
         }

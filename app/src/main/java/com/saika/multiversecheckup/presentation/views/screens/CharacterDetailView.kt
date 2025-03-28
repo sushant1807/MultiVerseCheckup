@@ -1,7 +1,6 @@
 package com.saika.multiversecheckup.presentation.views.screens
 
 import android.content.res.Configuration
-import android.util.Log
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -57,7 +56,6 @@ fun CharacterDetailView(
     navController: NavController
 ) {
 
-    Log.e("App ID 2", id.toString())
     val context = LocalContext.current
     val configuration = LocalConfiguration.current
     val isLandscape = configuration.orientation == Configuration.ORIENTATION_LANDSCAPE
@@ -144,40 +142,40 @@ fun CharacterDetailView(
                             Spacer(modifier = Modifier.height(6.dp))
 
                             LabeledDetail(
-                                text = character.species,
-                                contentDescription = character.species
+                                text = "Species: ${character.species}",
+                                contentDescription = "Species: ${character.species}"
                             )
 
 
                             Spacer(modifier = Modifier.height(6.dp))
 
                             LabeledDetail(
-                                text = character.status,
-                                contentDescription = character.status
+                                text = "Status: ${character.status}",
+                                contentDescription = "Status: ${character.status}"
                             )
 
 
                             Spacer(modifier = Modifier.height(6.dp))
 
                             LabeledDetail(
-                                text = character.origin,
-                                contentDescription = character.origin
+                                text = "Origin: ${character.origin}",
+                                contentDescription = "Origin: ${character.origin}"
+                            )
+
+                            Spacer(modifier = Modifier.height(6.dp))
+
+                            LabeledDetail(
+                                text = "Created On: ${formatDate(character.created)}",
+                                contentDescription = "Created On: ${formatDate(character.created)}"
                             )
 
                             character.type?.takeIf { it.isNotBlank() }?.let {
 
                                 Spacer(modifier = Modifier.height(6.dp))
 
-                                LabeledDetail(text = it, contentDescription = it)
+                                LabeledDetail(text = "Type: $it", contentDescription = "Type: $it")
 
                             }
-
-                            Spacer(modifier = Modifier.height(6.dp))
-
-                            LabeledDetail(
-                                text = formatDate(character.created),
-                                contentDescription = formatDate(character.created)
-                            )
 
                         }
                     }
@@ -225,8 +223,8 @@ fun CharacterDetailView(
                         item {
 
                             LabeledDetail(
-                                text = character.species,
-                                contentDescription = character.species
+                                text = "Species: ${character.species}",
+                                contentDescription = "Species: ${character.species}"
                             )
                         }
 
@@ -238,8 +236,8 @@ fun CharacterDetailView(
                         item {
 
                             LabeledDetail(
-                                text = character.status,
-                                contentDescription = character.status
+                                text = "Status: ${character.status}",
+                                contentDescription = "Status: ${character.status}"
                             )
                         }
 
@@ -251,8 +249,8 @@ fun CharacterDetailView(
                         item {
 
                             LabeledDetail(
-                                text = character.origin,
-                                contentDescription = character.origin
+                                text = "Origin: ${character.origin}",
+                                contentDescription = "Origin: ${character.origin}"
                             )
 
                         }
@@ -264,8 +262,8 @@ fun CharacterDetailView(
                         item {
 
                             LabeledDetail(
-                                text = formatDate(character.created),
-                                contentDescription = formatDate(character.created)
+                                text = "Created On: ${formatDate(character.created)}",
+                                contentDescription = "Created On: ${formatDate(character.created)}"
                             )
                         }
 
@@ -275,7 +273,7 @@ fun CharacterDetailView(
 
                         item {
                             character.type?.takeIf { it.isNotBlank() }?.let {
-                                LabeledDetail(text = it, contentDescription = it)
+                                LabeledDetail(text = "Type: $it", contentDescription = "Type: $it")
                             }
                         }
                     }
