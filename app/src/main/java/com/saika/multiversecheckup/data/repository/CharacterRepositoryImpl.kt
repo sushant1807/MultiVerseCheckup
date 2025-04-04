@@ -17,7 +17,12 @@ class CharacterRepositoryImpl(private val apiService: CharacterApiService) : Cha
         }
     }
 
-    override suspend fun getCharacterById(id: Int): Character {
-        return apiService.getCharacterById(id).toDomain()
+    override suspend fun getCharacterById(id: Int): Resource<Character> {
+        return try {
+            val result = apiService.getCharacterById(id).toDomain()
+            Resource.Success(result)
+        } catch (e: Exception) {
+            Resource.Error("Failed to load images: ${e.localizedMessage}")
+        }
     }
 }

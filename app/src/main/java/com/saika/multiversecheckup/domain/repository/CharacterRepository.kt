@@ -6,5 +6,5 @@ import com.saika.multiversecheckup.domain.util.Resource
 
 interface CharacterRepository {
     suspend fun searchCharacters(query: String): Resource<List<Character>>
-    suspend fun getCharacterById(id: Int): Character
+    suspend fun getCharacterById(id: Int): Resource<Character>
 }

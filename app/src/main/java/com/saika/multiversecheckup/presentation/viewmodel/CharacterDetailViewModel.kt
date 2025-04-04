@@ -23,12 +23,14 @@ class CharacterDetailViewModel @Inject constructor(
     fun loadCharacter(id: Int) {
         viewModelScope.launch {
             uiState = Resource.Loading
-            try {
-                val result = getCharacterDetail(id)
-                uiState = Resource.Success(result)
-            } catch (e: Exception) {
-                uiState = Resource.Error(e.message ?: "Failed to load character")
-            }
+
+            uiState = getCharacterDetail(id)
+//            try {
+//                val result = getCharacterDetail(id)
+//                uiState = Resource.Success(result)
+//            } catch (e: Exception) {
+//                uiState = Resource.Error(e.message ?: "Failed to load character")
+//            }
         }
     }
 
